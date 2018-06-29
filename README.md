@@ -51,7 +51,8 @@ PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_c
 | Variable | Indicator | Meaning |
 |----------|-----------|---------|
 | `ZSH_THEME_GIT_PROMPT_UNTRACKED` | ◒ | Untracked files |
-| `ZSH_THEME_GIT_PROMPT_ADDED` | ✓ | Files added to git |
+| `ZSH_THEME_GIT_PROMPT_CLEAN` | ✓ | Git repository is clean |
+| `ZSH_THEME_GIT_PROMPT_ADDED` | ✚ | Files added to git |
 | `ZSH_THEME_GIT_PROMPT_MODIFIED` | △ | Modified files |
 | `ZSH_THEME_GIT_PROMPT_DELETED` | ✖ | Deleted files |
 | `ZSH_THEME_GIT_PROMPT_RENAMED` | ➜ | Renamed files |
