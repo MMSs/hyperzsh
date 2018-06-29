@@ -24,6 +24,14 @@ function _python_venv() {
   fi
 }
 
+# If git repo, get git's root dir (aka: repo name)
+function _git_root_dir() {
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    git_root_dir=$(git rev-parse --show-toplevel|rev|cut -d '/' -f 1|rev)
+    echo "$git_root_dir"
+  fi
+}
+
 # Format for git_prompt_long_sha() and git_prompt_short_sha()
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="%{%F{yellow}%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%} "
