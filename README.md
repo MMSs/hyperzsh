@@ -58,6 +58,7 @@ PROMPT='$(_user_host)$(_python_venv)%{$fg[cyan]%}%c $(git_prompt_info)%{$reset_c
 | `ZSH_THEME_GIT_PROMPT_RENAMED` | ➜ | Renamed files |
 | `ZSH_THEME_GIT_PROMPT_UNMERGED` | § | Unmerged files |
 | `ZSH_THEME_GIT_PROMPT_AHEAD` | ▲ | Repo ahead of current branch |
+| `ZSH_THEME_GIT_PROMPT_BEHIND` | ▼ | Current branch ahead of origin |
 | `ZSH_THEME_GIT_PROMPT_DIRTY` | ✗ | Dirty repository |
 
 ### Right hand prompt  
