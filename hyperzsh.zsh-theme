@@ -6,7 +6,7 @@
 
 # My custom prompt
 PROMPT='
-$(_python_venv)%{$fg[cyan]%}%d%{$reset_color%} %{$fg[blue]%}$(_git_root_dir)$(git_prompt_info)%{$reset_color%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}
+$(_python_venv)%{$fg[cyan]%}%d%{$reset_color%} $(_git_root_dir)$(git_prompt_info)%{$reset_color%}$(_git_time_since_commit)$(git_prompt_status)${_return_status}
 ➜ '
 
 local _return_status="%{$fg[red]%}%(?..⍉ )%{$reset_color%}"
@@ -33,7 +33,7 @@ function _python_venv() {
 function _git_root_dir() {
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     git_root_dir=$(git rev-parse --show-toplevel|rev|cut -d '/' -f 1|rev)
-    echo "$git_root_dir:"
+    echo "%{$fg[blue]%}$git_root_dir:"
   fi
 }
 
